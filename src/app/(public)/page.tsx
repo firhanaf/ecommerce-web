@@ -20,12 +20,12 @@ export default function HomePage() {
   const categories = categoriesData?.data?.data ?? []
 
   return (
-    <main className="max-w-7xl mx-auto px-4 py-6 space-y-8">
+    <div className="space-y-8">
       {/* Categories */}
       {categories.length > 0 && (
         <section>
           <h2 className="text-lg font-semibold mb-3">Kategori</h2>
-          <div className="flex gap-3 overflow-x-auto pb-2">
+          <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
             <Link
               href="/products"
               className="shrink-0 px-4 py-2 rounded-full border text-sm font-medium hover:bg-primary hover:text-white hover:border-primary transition-colors"
@@ -73,6 +73,6 @@ export default function HomePage() {
           </div>
         )}
       </section>
-    </main>
+    </div>
   )
 }
